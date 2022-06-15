@@ -1,3 +1,9 @@
+:root {
+  --init-background: linear-gradient(to right, rgb(245, 200, 207), rgb(160, 160, 218));
+  --second-background: linear-gradient(to right, rgb(184, 226, 242), rgb(163, 163, 221)); 
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +13,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, rgb(245, 200, 207), rgb(160, 160, 218))
+  background: var(--init-background);
 }
 
 .calculator-grid {
@@ -55,4 +61,10 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+.toggle-color {
+  position: absolute;
+  top: 20px;
+  left: 100px;
 }

@@ -151,3 +151,21 @@ function handleKeyPress(e) {
     return
   }
 }
+
+function updateBackground() {
+  const initColor = 'var(--init-background)';
+  const secondColor = 'var(--second-background)';
+
+  const toggleBtn = document.querySelector('input[class="toggle-btn"]')
+  const currentBackgroundColor = toggleBtn.getAttribute('data');
+  if (currentBackgroundColor == 'init-background') {
+    document.body.style.background = secondColor;
+    toggleBtn.setAttribute('data', 'second-background')
+    return
+  }
+  if (currentBackgroundColor == 'second-background') {
+    document.body.style.background = initColor;
+    toggleBtn.setAttribute('data', 'init-background')
+    return
+  } 
+}
