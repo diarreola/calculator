@@ -126,3 +126,28 @@ deleteButton.addEventListener('click', button => {
   calculator.delete()
   calculator.updateDisplay()
 })
+
+document.addEventListener('keydown', handleKeyPress)
+function handleKeyPress(e) {
+  if (e.key === 'Enter' || e.key === '=') {
+    console.log('beep', e.key)
+    calculator.compute()
+    calculator.updateDisplay()
+    return
+  }
+  if (e.key === 'Delete' || e.key === 'Backspace') {
+    calculator.delete()
+    calculator.updateDisplay()
+    return
+  }
+  if (e.key.match(/[0-9]/ ) || e.key === '.') {
+    calculator.appendNumber(e.key)
+    calculator.updateDisplay()
+    return
+  }
+  if (e.key.match(/[*+-/]/)) {
+    calculator.chooseOperation(e.key)
+    calculator.updateDisplay()
+    return
+  }
+}
