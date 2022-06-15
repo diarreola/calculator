@@ -1,2 +1,3 @@
-# calculator
-[Calculator built with javascript](https://www.youtube.com/watch?v=j59qQ7YWLxw)
+# Calculator
+Created a calculator clone with the help of [this tutorial ](https://www.youtube.com/watch?v=j59qQ7YWLxw)
+![alt text](calculator.gif "calculator gif")
